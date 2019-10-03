@@ -7,7 +7,7 @@
 /**
  * The statuses emitted by the status callback.
  */
-typedef enum esp_mqtt_status_t { ESP_MQTT_STATUS_DISCONNECTED, ESP_MQTT_STATUS_CONNECTED } esp_mqtt_status_t;
+typedef enum esp_mqtt_status_t { ESP_MQTT_STATUS_DISCONNECTED, ESP_MQTT_STATUS_CONNECTED, ESP_MQTT_STATUS_CONNECTION_FAILED } esp_mqtt_status_t;
 
 /**
  * The status callback.

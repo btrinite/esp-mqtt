@@ -305,7 +305,10 @@ static void esp_mqtt_process(void *p) {
 
     // log fail
     ESP_LOGW(ESP_MQTT_LOG_TAG, "esp_mqtt_process: connection attempt failed");
-
+    // call callback if existing
+    if (esp_mqtt_status_callback) {
+      esp_mqtt_status_callback(ESP_MQTT_STATUS_CONNECTION_FAILED);
+    }
     // delay loop by 1s and yield to other processes
     vTaskDelay(1000 / portTICK_PERIOD_MS);
   }
